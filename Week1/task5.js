@@ -28,7 +28,7 @@ function testHoisting() {
   try {
     console.log("Inside function before declaration:", functionLet); // ReferenceError
   } catch (error) {
-    console.log("Error:", error.message);
+    console.log("Error:", error);
   }
 
   let functionLet = "Let inside function!";
@@ -46,7 +46,7 @@ testHoisting();
   try {
     console.log("Inside block with let before declaration:", blockLet); // reference error
   } catch (error) {
-    console.log("Error:", error.message);
+    console.log("Error:", error);
   }
 
   let blockLet = "Let inside block!";
@@ -60,5 +60,5 @@ console.log("Accessing var outside block:", blockVar); // "Var inside block!"
 try {
   console.log("Accessing let outside block:", blockLet); // reference error
 } catch (error) {
-  console.log("Error:", error.message);
+  console.log("Error:", error);
 }
